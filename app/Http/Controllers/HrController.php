@@ -761,9 +761,8 @@ class HrController extends Controller
 
         $banks = DB::table('banks')->where([['status','=','1'],['company_id', '=', Input::get('m')]])->get();
         $menu_privileges = Role::where([['status','=',1]])->orderBy('id')->get();
-
         CommonHelper::companyDatabaseConnection($company_id);
-        $reporting_to = Employee::select('id','emp_id','emp_name')->where('status','=',1)->get();
+            $reporting_to = Employee::select('id','emp_id','emp_name')->where('status','=',1)->get();
         CommonHelper::reconnectMasterDatabase();
 
         return view('Hr.Employees.createEmployeeForm',compact('department','designation','projects','leaves_policy',
@@ -985,8 +984,9 @@ class HrController extends Controller
         $designations = Cache::get('designation');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
+        $breadCrums = array('heading' => 'Employee / Employee List');
         return view('Hr.Employees.viewEmployeeList',compact('departments','sub_departments','category',
-            'projects','locations','designations','employees'));
+            'projects','locations','designations','employees','breadCrums'));
     }
 
     public function viewEmployeeReportList()

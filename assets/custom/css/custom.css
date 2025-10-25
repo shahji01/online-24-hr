@@ -60,7 +60,7 @@ input disabled:hover {
 
 }
 .card-body{
-  min-height: 342px;
+  /* min-height: 342px; */
 }
 
 .actionsLink a:hover{

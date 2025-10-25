@@ -12,12 +12,12 @@ $counter = 1
 
     <div class="page-wrapper">
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-4">
-                                <h4 class="card-title">Employee List</h4>
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-8 text-right">
                                 @if(in_array('print',$operation_rights))
@@ -28,7 +28,14 @@ $counter = 1
                                 @endif
                             </div>
                         </div>
-                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
                         <input type="hidden" id="company_id" value="{{ $m }}">
                         <div class="row">
                             @include('includes.allFilters')

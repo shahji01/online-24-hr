@@ -104,7 +104,7 @@ $accType = Auth::user()->acc_type;
             color: #aaa;
         }
         .card-body {
-            border-top: 4px solid #f7931e;
+            border-top: 4px solid #29abe2;
         }
 
         .animated {
