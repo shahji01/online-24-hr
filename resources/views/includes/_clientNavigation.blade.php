@@ -155,7 +155,7 @@ $i = 0;
         </nav>
     </header>
 
-    <aside class="left-sidebar" data-sidebarbg="skin6">
+    <aside class="left-sidebar" data-sidebarbg="skin6" style="background: #29abe2;">
         <div class="scroll-sidebar" data-sidebarbg="skin6">
             <nav class="sidebar-nav">
                 <?php
