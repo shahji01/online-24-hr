@@ -1,0 +1,1 @@
+[15-Jan-2020 07:14:28 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/rsywtaecm3kh/testing.sprucenetwork.com/app/Http/Controllers/CronJobController.php on line 19

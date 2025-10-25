@@ -1,0 +1,78 @@
+[13-Sep-2019 10:26:38 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/loanUpdation.php on line 20
+[13-Sep-2019 10:27:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/loanUpdation.php on line 20
+[13-Sep-2019 10:27:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/loanUpdation.php on line 20
+[13-Sep-2019 10:28:27 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/loanUpdation.php on line 20
+[13-Sep-2019 10:29:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/loanUpdation.php on line 20
+[13-Sep-2019 10:31:35 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/loanUpdation.php on line 19
+[13-Sep-2019 10:31:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/loanUpdation.php on line 19
+[13-Sep-2019 10:39:31 UTC] PHP Notice:  Undefined variable: con2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 16
+[13-Sep-2019 10:39:31 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 16
+[13-Sep-2019 10:39:31 UTC] PHP Notice:  Undefined variable: con2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 18
+[13-Sep-2019 10:39:31 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 18
+[13-Sep-2019 10:39:31 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 20
+[13-Sep-2019 10:42:43 UTC] PHP Notice:  Undefined variable: con2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 16
+[13-Sep-2019 10:42:43 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 16
+[13-Sep-2019 10:42:43 UTC] PHP Notice:  Undefined variable: con2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 18
+[13-Sep-2019 10:42:43 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 18
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:09:19 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 12
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:10:09 UTC] PHP Notice:  Undefined index: date in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 11
+[13-Sep-2019 11:48:36 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:48:38 UTC] PHP Fatal error:  Uncaught Error: Class 'DB' not found in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:50:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:50:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:50:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:50:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:17 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 19
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[13-Sep-2019 11:51:56 UTC] PHP Notice:  Undefined variable: row2 in /home/rsywtaecm3kh/testing.sprucenetwork.com/cronJobs/passwordUpdation.php on line 17
+[06-Aug-2021 06:27:07 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'inno-sfr-01'@'localhost' (using password: YES) in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 2
+[06-Aug-2021 06:27:07 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 8
+[06-Aug-2021 06:27:07 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 9
+[06-Aug-2021 06:27:07 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 40
+[06-Aug-2021 06:29:36 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'inno-sfr-01'@'localhost' (using password: YES) in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 2
+[06-Aug-2021 06:29:36 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 9
+[06-Aug-2021 06:29:36 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 10
+[06-Aug-2021 06:29:36 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 41
+[06-Aug-2021 06:30:29 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'inno-sfr-01'@'localhost' (using password: YES) in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 2
+[06-Aug-2021 06:30:29 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 9
+[06-Aug-2021 06:30:29 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 10
+[06-Aug-2021 06:30:29 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 43
+[06-Aug-2021 06:32:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function dd() in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/ljz29plvbph9/public_html/muzamil/vis.smrsoftwares.com/cronJobs/loanUpdation.php on line 16

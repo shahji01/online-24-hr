@@ -1,0 +1,152 @@
+.main {
+	background-color: #cecece !important;
+}
+.footer{
+		position: fixed !important;
+		background-image: url('http://testing.sprucenetwork.com/assets/img/A4-wm.png') !important;
+		height:100% !important;
+		width: 100% !important;
+		background-position: center !important;
+		background-size:100% !important;
+		color:#fff !important;
+		top:1100 !important;
+	}
+@media print {
+	.main {
+		background-color: #cecece !important;
+	}
+	.footer{
+		position: fixed !important;
+		background-image: url('http://testing.sprucenetwork.com/assets/img/A4-wm.png') !important;
+		height:100% !important;
+		width: 100% !important;
+		background-position: center !important;
+		background-size:100% !important;
+		color:#fff !important;
+		top:1100 !important;
+	}
+	.padding1 {
+		padding-left:40px !important;
+	} 
+	.letter-head {
+		padding-right:145px !important;
+	}
+	tr>td.print-black {
+        background-color: #cecdcd !important;
+		
+    }
+	.text-bold {
+		font-weight: bold !important;
+	}
+	.warning-line-hei {
+		line-height:17px !important;
+		text-align:justify !important;
+	}
+	p {
+		margin: 0px 0px 0px 0px !important;
+		text-align: justify !important;
+	}
+	
+	.print-font2 {
+		border:solid 0px #e8e6e600 !important;
+		padding:10px 30px 0px 30px !important;
+		font-size:14px !important;
+		font-family: calibri !important;
+		text-align: justify !important;
+	}
+	.print-font {
+		padding: 10px 50px 45px 50px !important;
+		border:solid 0px #e8e6e600 !important;
+		font-size:14px !important;
+		font-family: calibri !important;
+		text-align: justify !important;
+	}
+	
+	.warning-right {
+		float: right !important;
+		padding-right:30px !important;
+	}
+	.warning-mar {
+		margin-top: 6px !important;
+	}
+	.war-margin1 {
+		margin-top: 15px !important;
+	}
+	.warning-mar2 {
+		margin-top: 5px !important;
+		padding: 0px 40px 0px 40px !important;
+	}
+	.warning-top-mar {
+		margin-top: 240px;
+	}
+	.bor-bot {
+		border-bottom: solid 1px #000 !important;
+	}
+	.mima-logo {
+		height: 66px !important;
+	}
+	.print-font-size {
+		font-size:11px !important;
+	}
+	.print-head-size {
+		font-size:20px !important;
+	}
+	.print-font-size2 {
+		font-size:20px !important;
+	}
+	.print-sett {
+		line-height: 9px !important;
+		font-size: 11px !important;
+	}
+	.table-bordered > thead > tr > th, .table-bordered > tbody > tr > td {
+		border:solid 1px #000 !important;
+	} 
+	.print-container {
+		height:100% !important;
+	}	
+	.p-sett {
+		visibility:hidden !important;
+		color:#FFF !important;
+	}
+	.page-break2 {
+		page-break-before: always !important;
+		padding: 10px 0px 10px 0px!important;
+	}
+	.last-height {
+		visibility:hidden;
+	}
+	.after-regards-margin {
+		margin-bottom: 80px !important;
+	}
+	.before-regards-margin {
+		margin-top: 45px !important;
+	}
+
+	.before-subject-margin {
+		margin-top: 8px !important;
+	}
+
+	.after-hr-margin {
+		margin-bottom: 20px !important;
+	}
+	.before-signature-margin {
+		margin-top: 20px !important;
+	}
+
+	.increment-war-margin1 {
+		margin-top: 5px !important;
+	}
+
+	.increment-warning-top-mar {
+		margin-top: 210px;
+	}
+
+	.increment-before-signature-margin {
+		margin-top: 15px !important;
+	}
+
+	.increment-after-hr-margin {
+		margin-bottom: 15px !important;
+	}
+
+}
