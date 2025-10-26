@@ -33,6 +33,9 @@ use App\Helpers\CommonHelper;
                                 @if(in_array('export',$operation_rights))
                                     {{ CommonHelper::displayExportButton('exportList','','1') }}
                                 @endif
+                                   <a href="{{ url('/hr/createAllowanceTypeForm') . '?m=' . $m }}" class="btn btn-sm btn-success">
+           Add Allowance Type
+    </a>
                             </div>
                         </div>
                         <div class="row">

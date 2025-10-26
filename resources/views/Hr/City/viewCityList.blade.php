@@ -33,6 +33,9 @@ use App\Helpers\CommonHelper;
                                 @if(in_array('export',$operation_rights))
                                     {{ CommonHelper::displayExportButton('exportList','','1') }}
                                 @endif
+                                <a href="{{ url('/hr/createCityForm') . '?m=' . $m }}" class="btn btn-sm btn-success">
+           Add City
+    </a>
                             </div>
                         </div>
                         <div class="row">

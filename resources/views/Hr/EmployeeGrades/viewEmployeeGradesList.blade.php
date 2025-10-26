@@ -33,6 +33,10 @@ use App\Helpers\CommonHelper;
                                 @if(in_array('export',$operation_rights))
                                     {{ CommonHelper::displayExportButton('exportList','','1') }}
                                 @endif
+                                 <a href="{{ url('/hr/createEmployeeGradesForm') . '?m=' . $m }}" class="btn btn-sm btn-success">
+           Add Grades
+    </a>
+                         
                             </div>
                         </div>
 

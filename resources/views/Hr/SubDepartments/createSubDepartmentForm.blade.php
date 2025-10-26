@@ -39,11 +39,22 @@ $m = Input::get('m');
                         <div id="addMoreSection"></div>
                         <div class="row">&nbsp;</div>
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
+                            {{-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
                                 {{ Form::submit('Submit', ['class' => 'btn btn-sm btn-success']) }}
                                 <button type="reset" id="reset" class="btn btn-sm btn-primary">Clear Form</button>
                                 <input type="button" class="btn btn-sm btn-primary" value="Add More" onclick="addMoreRow()" />
-                            </div>
+                            </div> --}}
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
+    {{ Form::submit('Submit', ['class' => 'btn btn-sm btn-success']) }}
+    <button type="reset" id="reset" class="btn btn-sm btn-primary">Clear Form</button>
+    <input type="button" class="btn btn-sm btn-primary" value="Add More" onclick="addMoreRow()" />
+
+    <!-- View Sub Department List Button -->
+    <a href="{{ url('/hr/viewSubDepartmentList') . '?m=' . $m }}" class="btn btn-sm btn-info">
+        View Sub Department List
+    </a>
+</div>
+
                         </div>
                     </div>
                 </div>

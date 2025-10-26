@@ -42,6 +42,9 @@ $m = Input::get('m');
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
                                 {{ Form::submit('Submit', ['class' => 'btn btn-sm btn-success']) }}
                                 <button type="reset" id="reset" class="btn btn-sm btn-primary">Clear Form</button>
+                              <a href="{{ url('/hr/viewEOBIList') . '?m=' . $m }}" class="btn btn-sm btn-info">
+           View EOBI List
+    </a>
                             </div>
                         </div>
                     </div>

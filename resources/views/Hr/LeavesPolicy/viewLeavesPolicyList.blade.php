@@ -34,6 +34,12 @@ $counter = 1;
                                 @if(in_array('export',$operation_rights))
                                     {{ CommonHelper::displayExportButton('exportList','','1') }}
                                 @endif
+                                         <a href="{{ url('/hr/createLeavesPolicyForm') . '?m=' . $m }}" class="btn btn-sm btn-success">
+           Add Leaves Policy
+    </a>
+         <a href="{{ url('/hr/createManualLeaves') . '?m=' . $m }}" class="btn btn-sm btn-success">
+           Add Manual Leaves
+    </a>
                             </div>
                         </div>
 

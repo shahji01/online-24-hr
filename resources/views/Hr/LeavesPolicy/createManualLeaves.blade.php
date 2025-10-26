@@ -92,7 +92,11 @@ $currentDate = date('Y-m-d');
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
                                 <input type="submit" class="btn btn-sm btn-primary" id="create" value="Submit" style="margin-top: 32px;" />
+                            <a href="{{ url('/hr/viewLeavesPolicyList') . '?m=' . $m }}" class="btn btn-sm btn-info"  style="margin-top: 32px;" >
+           View Leaves Policy List
+    </a>
                             </div>
+                            
                         </div>
                     </div>
                         <div class="text-center ajax-loader"></div>

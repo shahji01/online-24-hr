@@ -63,6 +63,9 @@ if($accType == 'client'){
                                 {{--<input type="button" class="btn btn-sm btn-primary addMoreBonusSection" value="Add More Bonus Section" />--}}
                                 <button type="reset" id="reset" class="btn btn-sm btn-primary">Clear Form</button>
                                 {{ Form::submit('Submit', ['class' => 'btn btn-sm btn-success']) }}
+                                    <a href="{{ url('/hr/viewBonusList') . '?m=' . $m }}" class="btn btn-sm btn-info">
+           View Bonus List
+    </a>
                             </div>
                         </div>
                     </div>

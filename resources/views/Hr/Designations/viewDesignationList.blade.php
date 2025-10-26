@@ -26,14 +26,28 @@ use App\Helpers\CommonHelper;
                                     <input type="hidden" name="company_id" id="company_id" value="{{ $m }}">
                                 </div>
                             </div>
-                            <div class="col-sm-8 text-right">
+                            {{-- <div class="col-sm-8 text-right">
                                 @if(in_array('print',$operation_rights))
                                     {{ CommonHelper::displayPrintButtonInBlade('printList','','1') }}
                                 @endif
                                 @if(in_array('export',$operation_rights))
                                     {{ CommonHelper::displayExportButton('exportList','','1') }}
                                 @endif
-                            </div>
+                            </div> --}}
+                            <div class="col-sm-8 text-right">
+    @if(in_array('print',$operation_rights))
+        {{ CommonHelper::displayPrintButtonInBlade('printList','','1') }}
+    @endif
+    @if(in_array('export',$operation_rights))
+        {{ CommonHelper::displayExportButton('exportList','','1') }}
+    @endif
+
+    <!-- Add Designation Button -->
+    <a href="{{ url('/hr/createDesignationForm') . '?m=' . $m }}" class="btn btn-sm btn-success">
+        Add Designation
+    </a>
+</div>
+
                         </div>
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

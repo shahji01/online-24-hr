@@ -33,6 +33,9 @@ use App\Helpers\CommonHelper;
                                 @if(in_array('export',$operation_rights))
                                     {{ CommonHelper::displayExportButton('exportList','','1') }}
                                 @endif
+                            <a href="{{ url('/hr/createEOBIForm') . '?m=' . $m }}" class="btn btn-sm btn-success">
+           Add EOBI
+    </a>
                             </div>
                         </div>
                         <div class="row">

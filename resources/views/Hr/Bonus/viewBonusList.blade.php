@@ -38,7 +38,9 @@ use App\Helpers\CommonHelper;
                                 @if(in_array('export', $operation_rights))
                                     <?php echo CommonHelper::displayExportButton('BonusList','','1')?>
                                 @endif
-
+     <a href="{{ url('/hr/createBonusForm') . '?m=' . $m }}" class="btn btn-sm btn-success">
+           Add Bonus
+    </a>
                             </div>
 
                         </div>

@@ -95,7 +95,11 @@ $count=count($leaves_types)
                                 {{ Form::submit('Submit', ['class' => 'btn btn-sm btn-success']) }}
                                 <button type="reset" id="reset" class="btn btn-sm btn-primary">Clear Form</button>
                                 <input type="button" class="btn btn-sm btn-primary" value="Add More" onclick="addMoreRow()" />
+                                   <a href="{{ url('/hr/viewLeavesPolicyList') . '?m=' . $m }}" class="btn btn-sm btn-info">
+           View Leaves Policy List
+    </a>
                             </div>
+                             
                         </div>
                     </div>
                 </div>
