@@ -27,7 +27,6 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
-.htaccess
 storage/logs/laravel.log
 
 storage/framework/cache/data/65/dd/65dd3ab34ce5e81f53d6c823cd41b885b9cfe793
