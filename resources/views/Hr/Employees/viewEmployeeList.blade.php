@@ -16,9 +16,10 @@ $counter = 1
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-sm-4">
-                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
-                            </div>
+                          <h4 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+    {{$breadCrums['heading']}}
+</h4>
+
                             <div class="col-sm-8 text-right">
                                 @if(in_array('print',$operation_rights))
                                     {{ CommonHelper::displayPrintButtonInBlade('printList','','1') }}

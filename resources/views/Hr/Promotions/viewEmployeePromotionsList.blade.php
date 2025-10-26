@@ -23,7 +23,8 @@ use App\Helpers\HrHelper;
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-4">
-                                <h4 class="card-title">Promotion List</h4>
+                                                      <h4 class="card-title">{{$breadCrums['heading']}}</h4>
+
                             </div>
                             <div class="col-sm-8 text-right">
                                 @if(in_array('print',$operation_rights))

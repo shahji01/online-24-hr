@@ -41,7 +41,8 @@ class DashboardController extends Controller
 
     public function userDashboard()
     {
-        return view('Dashboard.userDashboard');
+               $breadCrums = array('heading' => 'Dashboard / User Dashboard');
+        return view('Dashboard.userDashboard',compact('breadCrums'));
 	}
 
     public function financeDashboard()

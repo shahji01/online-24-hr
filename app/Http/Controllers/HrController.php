@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 
+
 use App\Helpers\HrHelper;
 use App\Http\Requests;
 use App\Helpers\CommonHelper;
@@ -764,10 +765,10 @@ class HrController extends Controller
         CommonHelper::companyDatabaseConnection($company_id);
             $reporting_to = Employee::select('id','emp_id','emp_name')->where('status','=',1)->get();
         CommonHelper::reconnectMasterDatabase();
-
+  $breadCrums = array('heading' => 'Employee / Employee Form');
         return view('Hr.Employees.createEmployeeForm',compact('department','designation','projects','leaves_policy',
             'job_type','marital_status','degree_type','banks','category','grade_type','eobi',
-            'employee_equipment','menu_privileges','reporting_to','locations'));
+            'employee_equipment','menu_privileges','reporting_to','locations','breadCrums'));
     }
 
     public function editEmployeeDetailForm($id, $CompanyId)
@@ -999,8 +1000,9 @@ class HrController extends Controller
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
         $job_type = Cache::get('job_type');
+                $breadCrums = array('heading' => 'Employee / Employee Report');
         return view('Hr.Employees.viewEmployeeReportList',compact('departments','sub_departments','category',
-            'projects','locations','designations','employees','job_type'));
+            'projects','locations','designations','employees','job_type','breadCrums'));
     }
 
     public function viewEmployeeLogDetail($id){
@@ -1021,7 +1023,8 @@ class HrController extends Controller
             ->leftJoin('menu_privileges AS mp', 'mp.employee_id','=', 'u.employee_id')
             ->leftJoin('roles AS r', 'r.id','=', 'mp.role_id')
             ->select('u.*','r.role_name')->orderBy('id','asc')->get();
-        return view('Hr.Employees.viewUserAccountsList',compact('users'));
+              $breadCrums = array('heading' => 'Employee /  User Accounts List');
+        return view('Hr.Employees.viewUserAccountsList',compact('users','breadCrums'));
     }
 
     public function editUserAccountDetailForm()
@@ -1037,12 +1040,14 @@ class HrController extends Controller
     public function uploadEmployeeFileForm()
     {
         $locations = Cache::get('locations');
-        return view('Hr.Employees.uploadEmployeeFileForm',compact('locations'));
+             $breadCrums = array('heading' => 'Employee / Upload Employee Form');
+        return view('Hr.Employees.uploadEmployeeFileForm',compact('locations','breadCrums'));
 
     }
 
     public function createManageAttendanceForm(){
-        return view('Hr.Attendance.createManageAttendanceForm');
+         $breadCrums = array('heading' => 'Attendance / Manage Employees Attendance');
+        return view('Hr.Attendance.createManageAttendanceForm',compact('breadCrums'));
     }
 
 
@@ -1071,7 +1076,8 @@ class HrController extends Controller
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
         $job_type = Cache::get('job_type');
-        return view('Hr.Attendance.ViewAttendanceProgress',compact('departments','sub_departments','category','projects','locations','employees','job_type'));
+                 $breadCrums = array('heading' => 'Attendance / Employee Attendance Progress');
+        return view('Hr.Attendance.ViewAttendanceProgress',compact('departments','sub_departments','category','projects','locations','employees','job_type','breadCrums'));
 
     }
 
@@ -1097,7 +1103,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.Attendance.viewEmployeeAttendanceList',compact('departments','sub_departments','locations','category','projects','employees'));
+         $breadCrums = array('heading' => 'Attendance / Attendance List');
+        return view('Hr.Attendance.viewEmployeeAttendanceList',compact('departments','sub_departments','locations','category','projects','employees','breadCrums'));
     }
 
     public function viewEmployeeAttendanceReport()
@@ -1108,7 +1115,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.Attendance.viewEmployeeAttendanceReport',compact('departments','sub_departments','locations','category','projects','employees'));
+           $breadCrums = array('heading' => 'Attendance / Attendance Report');
+        return view('Hr.Attendance.viewEmployeeAttendanceReport',compact('departments','sub_departments','locations','category','projects','employees','breadCrums'));
     }
 
     public function showLocationOnMap()
@@ -1139,7 +1147,8 @@ class HrController extends Controller
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
         $job_type = Cache::get('job_type');
-        return view('Hr.Payroll.createPayrollForm',compact('departments','sub_departments','category','projects','locations','employees','job_type'));
+           $breadCrums = array('heading' => 'Payroll / Payroll Form');
+        return view('Hr.Payroll.createPayrollForm',compact('departments','sub_departments','category','projects','locations','employees','job_type','breadCrums'));
     }
 
     public function viewPayrollList(){
@@ -1166,8 +1175,8 @@ class HrController extends Controller
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
         $job_type = Cache::get('job_type');
-
-        return view('Hr.Payroll.viewPayrollReport',compact('departments','sub_departments','locations','category','projects','employees','job_type'));
+        $breadCrums = array('heading' => 'Payroll / Payroll Report');
+        return view('Hr.Payroll.viewPayrollReport',compact('departments','sub_departments','locations','category','projects','employees','job_type','breadCrums'));
     }
 
     public function viewBankReportForm()
@@ -1179,8 +1188,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-
-        return view('Hr.Payroll.viewBankReportForm',compact('banks','departments','locations','category','projects','employees'));
+    $breadCrums = array('heading' => 'Payroll / Bank Report');
+        return view('Hr.Payroll.viewBankReportForm',compact('banks','departments','locations','category','projects','employees','breadCrums'));
 
     }
 
@@ -1198,7 +1207,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.emailPayslips',compact('departments','locations','category','projects','employees'));
+            $breadCrums = array('heading' => 'Payroll / Email Payslip');
+        return view('Hr.emailPayslips',compact('departments','locations','category','projects','employees','breadCrums'));
     }
 
     public function bonusPayslipsEmail()
@@ -1206,7 +1216,8 @@ class HrController extends Controller
         CommonHelper::companyDatabaseConnection(Input::get('m'));
         $employee = Employee::select('emp_id','emp_name','emp_father_name')->where('status',1)->orderBy('id')->get();
         CommonHelper::reconnectMasterDatabase();
-        return view('Hr.bonusEmailPayslips', compact('employee'));
+         $breadCrums = array('heading' => 'Bonus / Bonus Payslips Email');
+        return view('Hr.bonusEmailPayslips', compact('employee','breadCrums'));
     }
 
     public function viewPayslipPdf($m,$month,$year,$employee_id)
@@ -1372,8 +1383,8 @@ class HrController extends Controller
         $employees = Cache::get('employee');
         $allowance_types = Cache::get('allowance_types');
         $locations = Cache::get('locations');
-
-        return view('Hr.Allowances.createAllowanceForm',compact('departments','locations','sub_departments','category','projects','employees','allowance_types'));
+           $breadCrums = array('heading' => 'Allowance / Allowance Form');
+        return view('Hr.Allowances.createAllowanceForm',compact('departments','locations','sub_departments','category','projects','employees','allowance_types','breadCrums'));
     }
 
     public function viewAllowanceList()
@@ -1385,8 +1396,8 @@ class HrController extends Controller
         $employees = Cache::get('employee');
         $allowance_types = Cache::get('allowance_types');
         $locations = Cache::get('locations');
-
-        return view('Hr.Allowances.viewAllowanceList',compact('departments','sub_departments','category','locations','projects','employees','allowance_types'));
+   $breadCrums = array('heading' => 'Allowance / Allowance List');
+        return view('Hr.Allowances.viewAllowanceList',compact('departments','sub_departments','category','locations','projects','employees','allowance_types','breadCrums'));
     }
 
     public function editAllowanceDetailForm()
@@ -1406,7 +1417,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.Deductions.createDeductionForm',compact('departments','sub_departments','locations','category','projects','employees'));
+                $breadCrums = array('heading' => 'Deduction / Deduction Form');
+        return view('Hr.Deductions.createDeductionForm',compact('departments','sub_departments','locations','category','projects','employees','breadCrums'));
     }
 
     public function viewDeductionList()
@@ -1417,8 +1429,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
-
-        return view('Hr.Deductions.viewDeductionList',compact('departments','locations','sub_departments','category','projects','employees'));
+  $breadCrums = array('heading' => 'Deduction / Deduction List');
+        return view('Hr.Deductions.viewDeductionList',compact('departments','locations','sub_departments','category','projects','employees','breadCrums'));
     }
 
     public function editDeductionDetailForm()
@@ -1441,7 +1453,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.AdvanceSalary.createAdvanceSalaryForm',compact('departments','sub_departments','locations','category','projects','employees'));
+          $breadCrums = array('heading' => 'Advance Salary / Advance Salary Form');
+        return view('Hr.AdvanceSalary.createAdvanceSalaryForm',compact('departments','sub_departments','locations','category','projects','employees','breadCrums'));
     }
 
     public function viewAdvanceSalaryList()
@@ -1452,7 +1465,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.AdvanceSalary.viewAdvanceSalaryList',compact('departments','sub_departments','locations','category','projects','employees'));
+                  $breadCrums = array('heading' => 'Advance Salary / Advance Salary List');
+        return view('Hr.AdvanceSalary.viewAdvanceSalaryList',compact('departments','sub_departments','locations','category','projects','employees','breadCrums'));
     }
 
     public function editAdvanceSalaryDetailForm()
@@ -1516,8 +1530,9 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
+      $breadCrums = array('heading' => 'Working Hrs Policy / Assign Working Hours Policy Form'); 
         $workingHoursPolicy = WorkingHoursPolicy::where([['status','=', 1]])->get();
-        return view('Hr.WorkingHoursPolicy.assignWorkingHoursPolicyForm',compact('departments','locations','sub_departments','category','projects','employees','workingHoursPolicy'));
+        return view('Hr.WorkingHoursPolicy.assignWorkingHoursPolicyForm',compact('departments','locations','sub_departments','category','projects','employees','workingHoursPolicy','breadCrums'));
     }
 
     public function assignRosterPolicy()
@@ -1535,12 +1550,14 @@ class HrController extends Controller
 
     public function createWorkingHoursPolicyDetailForm()
     {
-        return view('Hr.WorkingHoursPolicy.createWorkingHoursPolicyDetailForm');
+         $breadCrums = array('heading' => 'Working Hrs Policy / Working Hours Policy Form'); 
+    return view('Hr.WorkingHoursPolicy.createWorkingHoursPolicyDetailForm',compact('breadCrums'));
     }
 
     public function createHolidaysForm()
     {
-        return view('Hr.Holidays.createHolidaysForm');
+         $breadCrums = array('heading' => 'Holidays / Holidays Calender'); 
+        return view('Hr.Holidays.createHolidaysForm',compact('breadCrums'));
     }
 
     public function viewHolidaysList()
@@ -1568,13 +1585,15 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
-        return view('Hr.WorkingHoursPolicy.viewAssignedWorkingHoursPolicyList',compact('departments','locations','sub_departments','category','projects','employees'));
+   $breadCrums = array('heading' => 'Working Hrs Policy / Assigned Working Hours Policy List'); 
+        return view('Hr.WorkingHoursPolicy.viewAssignedWorkingHoursPolicyList',compact('departments','locations','sub_departments','category','projects','employees','breadCrums'));
     }
 
     public function viewWorkingHoursPolicyList()
     {
         $workingHoursPolicyList = DB::table('working_hours_policy')->get();
-        return view('Hr.WorkingHoursPolicy.viewWorkingHoursPolicyList',compact('workingHoursPolicyList'));
+          $breadCrums = array('heading' => 'Working Hrs Policy / Working Hours Policy List'); 
+        return view('Hr.WorkingHoursPolicy.viewWorkingHoursPolicyList',compact('workingHoursPolicyList','breadCrums'));
     }
 
 //    public function createCarPolicyForm()
@@ -1620,7 +1639,8 @@ class HrController extends Controller
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
         $loan_types = Cache::get('loan_type');
-        return view('Hr.loanRequests.createLoanRequestForm',compact('departments','locations','sub_departments','category','projects','employees','loan_types'));
+               $breadCrums = array('heading' => 'Loan Request / Loan Request Form');
+        return view('Hr.loanRequests.createLoanRequestForm',compact('departments','locations','sub_departments','category','projects','employees','loan_types','breadCrums'));
     }
 
     public function viewLoanRequestList()
@@ -1631,7 +1651,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
-        return view('Hr.loanRequests.viewLoanRequestList',compact('departments','locations','sub_departments','category','projects','locations','employees'));
+                 $breadCrums = array('heading' => 'Loan Request / Loan Request List');
+        return view('Hr.loanRequests.viewLoanRequestList',compact('departments','locations','sub_departments','category','projects','locations','employees','breadCrums'));
     }
 
     public function editLoanRequestDetailForm()
@@ -1675,7 +1696,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
-        return view('Hr.loanRequests.viewLoanReportForm', compact('departments','locations','sub_departments','category','projects','employees'));
+                 $breadCrums = array('heading' => 'Loan Request / Loan Report');
+        return view('Hr.loanRequests.viewLoanReportForm', compact('departments','locations','sub_departments','category','projects','employees','breadCrums'));
     }
 
     public function createEOBIForm()
@@ -1702,6 +1724,7 @@ class HrController extends Controller
     public function viewTaxesList()
     {
         $tax = Tax::where([['status', '=', 1]])->get();
+
         return view('Hr.Taxes.viewTaxesList',compact('tax'));
 
     }
@@ -1755,8 +1778,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-
-        return view('Hr.Bonus.viewEmployeeBonusReportForm',compact('departments','locations','sub_departments','category','projects','employees'));
+    $breadCrums = array('heading' => 'Bonus / Bonus Report Form ');
+        return view('Hr.Bonus.viewEmployeeBonusReportForm',compact('departments','locations','sub_departments','category','projects','employees','breadCrums'));
 
     }
 
@@ -1872,7 +1895,8 @@ class HrController extends Controller
         $category = Cache::get('employee_category');
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
-        return view('Hr.Bonus.viewBonusBankReportForm',compact('banks','departments','sub_departments','category','projects','employees'));
+           $breadCrums = array('heading' => 'Bonus / View Bank Report Form');
+        return view('Hr.Bonus.viewBonusBankReportForm',compact('banks','departments','sub_departments','category','projects','employees','breadCrums'));
     }
 
 
@@ -1887,7 +1911,8 @@ class HrController extends Controller
         CommonHelper::companyDatabaseConnection(Input::get('m'));
         $bonus_list = Bonus::where([['status','=','1']])->orderBy('id')->get();
         CommonHelper::reconnectMasterDatabase();
-        return view('Hr.Bonus.IssueBonusDetailForm',compact('bonus_list','locations','departments','sub_departments','category','projects','employees'));
+                         $breadCrums = array('heading' => 'Bonus / Employees Bonus Form');
+        return view('Hr.Bonus.IssueBonusDetailForm',compact('bonus_list','locations','departments','sub_departments','category','projects','employees','breadCrums'));
     }
 
     public function createLeaveApplicationForm()
@@ -1898,8 +1923,9 @@ class HrController extends Controller
         $locations = Cache::get('locations');
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
+            $breadCrums = array('heading' => 'Leave Application / Leave Application Form');
         return view('Hr.LeaveApplication.createLeaveApplicationFormClient', compact('departments','locations','sub_departments','category',
-            'projects','employees'));
+            'projects','employees','breadCrums'));
 //        if($accType == 'client')
 //        {
 //            $departments = Cache::get('department');
@@ -2021,9 +2047,9 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $job_type = Cache::get('job_type');
-
+ $breadCrums = array('heading' => 'Leave Application / Leave Application Form'); 
         return view('Hr.LeaveApplication.addLeaveApplicationFrom', compact('departments','locations','sub_departments','category',
-            'projects','employees','job_type'));
+            'projects','employees','job_type','breadCrums'));
     }
 
     public function viewLeaveApplicationRequestList()
@@ -2036,8 +2062,8 @@ class HrController extends Controller
         $employees = Cache::get('employee');
         $leave_types = Cache::get('leave_type');
         $locations = Cache::get('locations');
-
-        return view('Hr.LeaveApplication.viewLeaveApplicationRequestList', compact('leave_types','locations','departments','sub_departments','category','projects','employees'));
+      $breadCrums = array('heading' => 'Leave Application / Leave Application Request List'); 
+        return view('Hr.LeaveApplication.viewLeaveApplicationRequestList', compact('leave_types','locations','departments','sub_departments','category','projects','employees','breadCrums'));
     }
 
     public function viewLeaveBalances()
@@ -2048,7 +2074,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
-        return view('Hr.LeaveApplication.viewLeaveBalances', compact('departments','sub_departments','category','projects','employees','locations'));
+ $breadCrums = array('heading' => 'Leave Application / Leaves Balances Report'); 
+        return view('Hr.LeaveApplication.viewLeaveBalances', compact('departments','sub_departments','category','projects','employees','locations','breadCrums'));
        
     }
 
@@ -2245,12 +2272,14 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.ExitClearance.createEmployeeExitClearanceForm',compact('departments','sub_departments','locations','category','projects','employees'));
+          $breadCrums = array('heading' => 'Exit / FNF / Exit Clearance Form'); 
+        return view('Hr.ExitClearance.createEmployeeExitClearanceForm',compact('departments','sub_departments','locations','category','projects','employees','breadCrums'));
     }
 
     public function viewEmployeeExitClearanceList()
     {
-        return view('Hr.ExitClearance.viewEmployeeExitClearanceList');
+          $breadCrums = array('heading' => 'Exit / FNF / Exit Clearance List'); 
+        return view('Hr.ExitClearance.viewEmployeeExitClearanceList',compact('breadCrums'));
     }
 
     public function editEmployeeExitClearanceDetailForm()
@@ -2271,7 +2300,9 @@ class HrController extends Controller
         CommonHelper::companyDatabaseConnection(Input::get('m'));
         $employees = Cache::get('employee');
         CommonHelper::reconnectMasterDatabase();
-        return view('Hr.FinalSettlement.createFinalSettlementForm',compact('employees'));
+        
+  $breadCrums = array('heading' => 'Exit / FNF / Final Settlement Form'); 
+        return view('Hr.FinalSettlement.createFinalSettlementForm',compact('employees', 'breadCrums'));
     }
 
     public function viewFinalSettlementList()
@@ -2287,9 +2318,9 @@ class HrController extends Controller
         $employee_search = Employee::select('id','emp_id','emp_name')
             ->whereIn('id',$empId)->orderBy('id','asc')->get();
 
-
+  $breadCrums = array('heading' => 'Exit / FNF / Final Settlement List'); 
         CommonHelper::reconnectMasterDatabase();
-        return view('Hr.FinalSettlement.viewFinalSettlementList',compact('employee_search','company_id'));
+        return view('Hr.FinalSettlement.viewFinalSettlementList',compact('employee_search','company_id', 'breadCrums'));
 
     }
 
@@ -2379,8 +2410,9 @@ class HrController extends Controller
         $locations = Cache::get('locations');
         $designations = Cache::get('designation');
         $grade_type = Cache::get('grades');
+           $breadCrums = array('heading' => 'Promotion / Increment / Employee Promotion / Increment Form'); 
         return view('Hr.Promotions.createEmployeePromotionForm',compact('departments','sub_departments','category',
-            'projects','employees','designations','locations','grade_type'));
+            'projects','employees','designations','locations','grade_type','breadCrums'));
     }
 
     public function viewEmployeePromotionsList()
@@ -2393,9 +2425,9 @@ class HrController extends Controller
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
         $job_type = Cache::get('job_type');
-
+  $breadCrums = array('heading' => 'Promotion / Increment / Promotion List'); 
         return view('Hr.Promotions.viewEmployeePromotionsList', compact('departments','sub_departments','category',
-            'projects','employees','locations','job_type'));
+            'projects','employees','locations','job_type','breadCrums'));
     }
 
     public function editEmployeePromotionDetailForm()
@@ -2422,8 +2454,8 @@ class HrController extends Controller
         $locations = Cache::get('locations');
         $allowance_types = Cache::get('allowance_types');
         $job_type = Cache::get('job_type');
-
-        return view('Hr.Promotions.bulkIncrementForm',compact('departments','sub_departments','locations','category','projects','employees','allowance_types','job_type'));
+  $breadCrums = array('heading' => 'Promotion / Increment / Bulk Increment Form'); 
+        return view('Hr.Promotions.bulkIncrementForm',compact('departments','sub_departments','locations','category','projects','employees','allowance_types','job_type','breadCrums'));
     }
 
     public function editEmployeeTransferDetailForm()
@@ -2834,7 +2866,8 @@ class HrController extends Controller
 
     public function viewMySalarySheet()
     {
-        return view('Hr.SalarySheet.viewMySalarySheet');
+          $breadCrums = array('heading' => 'Salary Sheet / View My Salary Sheet');
+        return view('Hr.SalarySheet.viewMySalarySheet',compact('breadCrums'));
     }
 
     public function createRebateForm()
@@ -2845,7 +2878,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.Rebate.createRebateForm',compact('departments','locations','sub_departments','category','projects','employees'));
+             $breadCrums = array('heading' => 'Rebate / Rebate Form');
+        return view('Hr.Rebate.createRebateForm',compact('departments','locations','sub_departments','category','projects','employees','breadCrums'));
     }
 
     public function viewRebateList()
@@ -2856,7 +2890,8 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $employees = Cache::get('employee');
         $locations = Cache::get('locations');
-        return view('Hr.Rebate.viewRebateList',compact('departments','locations','sub_departments','category','projects','employees'));
+               $breadCrums = array('heading' => 'Rebate / Rebate List');
+        return view('Hr.Rebate.viewRebateList',compact('departments','locations','sub_departments','category','projects','employees','breadCrums'));
     }
 
     public function createCityForm()
@@ -2918,8 +2953,9 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
+            $breadCrums = array('heading' => 'Payroll / Reconciliation Report');
         return view('Hr.Payroll.viewReconciliationReport', compact('departments','sub_departments','category',
-            'projects','employees','locations'));
+            'projects','employees','locations','breadCrums'));
     }
     
     public function viewEmployeeProbationExpireDetail()
@@ -2935,8 +2971,9 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
+                       $breadCrums = array('heading' => 'Gratuity / Employees Gratuity Form');
         return view('Hr.Gratuity.viewEmployeeGratuityForm', compact('departments','sub_departments','category',
-            'projects','employees','locations'));
+            'projects','employees','locations','breadCrums'));
     }
     
     public function viewTaxCertificateList()
@@ -2947,8 +2984,9 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
+                   $breadCrums = array('heading' => 'Payroll / Tax Certificate');
         return view('Hr.Payroll.viewTaxCertificateList', compact('departments','sub_departments','category',
-            'projects','employees','locations'));
+            'projects','employees','locations','breadCrums'));
     }
 
     public function viewTaxCertificate($employee_id, $year, $company_id)
@@ -2988,8 +3026,9 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
+           $breadCrums = array('heading' => 'Leaves Encashment / Leaves Encashment Form');
         return view('Hr.LeavesEncashment.leavesEncashmentForm', compact('departments','sub_departments','category',
-            'projects','employees','locations'));
+            'projects','employees','locations','breadCrums'));
     }
 
     public function createTFAllowanceForm()
@@ -3000,8 +3039,9 @@ class HrController extends Controller
         $projects = Cache::get('employee_projects');
         $locations = Cache::get('locations');
         $employees = Cache::get('employee');
+                    $breadCrums = array('heading' => 'Payroll / TF Allowance Form');
         return view('Hr.Payroll.createTFAllowanceForm', compact('departments','sub_departments','category',
-            'projects','employees','locations'));
+            'projects','employees','locations','breadCrums'));
     }
 
 

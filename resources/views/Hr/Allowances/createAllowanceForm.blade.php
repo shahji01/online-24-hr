@@ -83,7 +83,7 @@ $user_roles = CommonHelper::userRoles($m);
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">Allowance Form</h4>
+                                 <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-4">
                                 <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"

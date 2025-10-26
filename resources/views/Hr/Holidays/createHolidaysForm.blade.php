@@ -14,7 +14,7 @@ use App\Helpers\HrHelper;
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">Holidays Calender</h4>
+                               <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                         </div>
                         <hr>

@@ -14,7 +14,7 @@ $m = Input::get('m');
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">Bank Report</h4>
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-4 text-right">
                                 @if(in_array('print', $operation_rights))

@@ -14,7 +14,7 @@ use App\Helpers\CommonHelper;
                         <input type="hidden" name="formSection[]" id="formSection" value="1" />
                         <div class="row">
                             <div class="col-sm-6">
-                                <h4 class="card-title">Leaves Balances Report</h4>
+                               <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-6 text-right">
                                 @if(in_array('print',$operation_rights))

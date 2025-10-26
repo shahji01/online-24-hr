@@ -15,7 +15,7 @@ $user_roles = CommonHelper::userRoles($m);
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="card-title">Leave Application Form</h4>
+                               <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                         </div>
                         <hr>

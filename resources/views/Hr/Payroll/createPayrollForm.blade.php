@@ -12,7 +12,7 @@ use App\Helpers\CommonHelper;
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">Payroll Form</h4>
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-4 text-right">
                                 @if(in_array('print', $operation_rights))

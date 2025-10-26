@@ -19,7 +19,7 @@ use App\Models\SubDepartment;
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-4">
-                                <h4 class="card-title">Tax Certificate</h4>
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-8 text-right">
                                 @if(in_array('print',$operation_rights))

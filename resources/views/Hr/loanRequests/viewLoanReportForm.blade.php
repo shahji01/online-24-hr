@@ -14,7 +14,7 @@ use App\Models\SubDepartment;
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h4 class="card-title">Loan Report</h4>
+                               <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-6 text-right">
                                 @if(in_array('print',$operation_rights))

@@ -19,7 +19,7 @@ use App\Models\Role;
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">User Accounts List</h4>
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-4 text-right">
                             </div>

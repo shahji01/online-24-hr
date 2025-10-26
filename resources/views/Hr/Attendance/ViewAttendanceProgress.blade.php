@@ -15,7 +15,7 @@ $m = Input::get('m');
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">Employee Attendance Progress</h4>
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                             <div class="col-sm-4 text-right">
                                 {{ CommonHelper::displayPrintButtonInBlade('PrintAttendanceList','','1') }}

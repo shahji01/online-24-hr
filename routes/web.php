@@ -3,6 +3,10 @@
 use App\User;
 use App\Helpers\CommonHelper;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+
 Route::auth();
 
 Route::get('logout', 'Auth\LoginController@logout', function () {

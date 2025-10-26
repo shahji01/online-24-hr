@@ -92,7 +92,8 @@ class UsersController extends Controller
 
     public function editUserProfile()
     {
-        return view('Users.editUserProfile');
+           $breadCrums = array('heading' => 'Settings / Change Password');
+        return view('Users.editUserProfile',compact('breadCrums'));
     }
     
     public function editMyProfile()

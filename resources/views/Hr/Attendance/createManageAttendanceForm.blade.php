@@ -19,7 +19,7 @@ $m = Input::get('m');
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">Manage Employees Attendance</h4>
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                         </div>
                         <hr>

@@ -12,8 +12,11 @@ $user_roles = CommonHelper::userRoles($m);
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
+                              {{-- <div class="col-sm-4">
+                                <h4 class="card-title">{{$breadCrums['heading']}}</h4>
+                            </div> --}}
                             <div class="col-sm-12" >
-                                <h4 class="card-title" style="display: flex; justify-content: space-between;">Upload Employee Form  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-right">
+                                <h4 class="card-title" style="display: flex; justify-content: space-between;">{{$breadCrums['heading']}}  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-right">
                                         <a class="btn btn-sm btn-primary" href="{{ url('/') }}/assets/sample_images/employee_samples.xlsx">Download Sample / Format </a>
                                     </div></h4>
                             </div>

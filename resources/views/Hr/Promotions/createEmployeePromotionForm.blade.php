@@ -11,7 +11,7 @@ $m = Input::get('m');
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4 class="card-title">Employee Promotion / Increment Form</h4>
+                               <h4 class="card-title">{{$breadCrums['heading']}}</h4>
                             </div>
                         </div>
                         {{ Form::open(array('url' => 'had/addEmployeePromotionDetail')) }}
